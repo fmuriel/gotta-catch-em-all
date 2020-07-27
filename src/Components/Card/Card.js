@@ -5,6 +5,7 @@ function Card({ pokemon }) {
 		<div className="card">
 			<div className="card-img">
 				<img src={pokemon.sprites.front_default} alt={pokemon.name} />
+				<img src={pokemon.sprites.back_default} alt={pokemon.name} />
 			</div>
 			<div className="card-name">
 				<h3>{pokemon.name}</h3>
@@ -17,7 +18,6 @@ function Card({ pokemon }) {
 						</div>
 					)
 				})}
-
 
 			</div>
 			<div className="card-info">
@@ -33,7 +33,13 @@ function Card({ pokemon }) {
 
 				<div className="poke-ability">
 					<h4>Ability</h4>
-					<p>{pokemon.abilities[0].ability.name}</p>
+					<p>{pokemon.abilities.map(key => {
+					return (
+						<div className="poke-type">
+							{key.ability.name}
+						</div>
+					)
+				})}</p>
 				</div>
 			</div>
 		</div>
