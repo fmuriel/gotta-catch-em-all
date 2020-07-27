@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { getAllPokemon, getPokemon } from './services/pokeapi';
-import Welcome from './components/welcome/Welcome';
 import Card from './components/card/Card';
 import './App.css';
 

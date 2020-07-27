@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Welcome from '../components/welcome/Welcome.js';
-import PokeDisplay from '../components/pokeDisplay/PokeDisplay.js';
 import App from '../App.js';
 import NotFound from '../components/welcome/NotFound.js';
 
