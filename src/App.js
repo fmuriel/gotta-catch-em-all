@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { getAllPokemon, getPokemon } from './Services/pokeapi';
-import Card from './Components/Card/Card';
+import { getAllPokemon, getPokemon } from './services/pokeapi';
+import Welcome from './components/welcome/Welcome';
+import Card from './components/card/Card';
 import './App.css';
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
   }
 
   const pagPrev = async () => {
-    if(!prevUrl) return;
+    if (!prevUrl) return;
 
     setLoading(true);
     let data = await getAllPokemon(prevUrl)
@@ -41,8 +42,6 @@ function App() {
     setPrevUrl(data.previous);
     setLoading(false);
   }
-
-
 
   const loadingPokemon = async (data) => {
     let _pokemonData = await Promise.all(data.map(async pokemon => {
@@ -55,9 +54,9 @@ function App() {
 
   return (
     <>
-    <button onClick={pagPrev} disabled={prevUrl ? '' : 'disabled'}>Prev</button>
+      <button onClick={pagPrev} disabled={prevUrl ? '' : 'disabled'}>Prev</button>
 
-    <button onClick={pagNext}>Next</button>
+      <button onClick={pagNext}>Next</button>
 
       {loading ? <h2>Loading...</h2> : (
         <>

@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
+import './Card.scss';
 
 function Card({ pokemon }) {
+
 	return (
 		<div className="card">
-			<div className="card-img">
+			<h3 className="poke-name">{pokemon.name}</h3>
+			<div className="avatar">
 				<img src={pokemon.sprites.front_default} alt={pokemon.name} />
 				<img src={pokemon.sprites.back_default} alt={pokemon.name} />
 			</div>
-			<div className="card-name">
-				<h3>{pokemon.name}</h3>
-			</div>
-			<div className="card-types">
+
+			<div className="poke-types">
 				{pokemon.types.map(type => {
 					return (
-						<div className="poke-type">
+						<div className="poke-type" type={type.type.name} >
 							{type.type.name}
 						</div>
 					)
 				})}
-
 			</div>
-			<div className="card-info">
+
+			<div className="poke-info">
 				<div className="poke-weight">
 					<h4>Weight</h4>
 					<p>{pokemon.weight}</p>
@@ -42,6 +43,7 @@ function Card({ pokemon }) {
 				})}</p>
 				</div>
 			</div>
+
 		</div>
 	)
 }
