@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Router from './services/Router';
+import Router from './services/router';
 import './index.css';
 
 ReactDOM.render(

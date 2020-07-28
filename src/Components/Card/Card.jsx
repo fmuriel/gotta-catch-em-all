@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './Card.scss';
 
-function Card({ pokemon }) {
+const Card = ({ pokemon }) => {
 
 	return (
 		<div className="card">
-			<h3 className="poke-name">{pokemon.name}</h3>
+			<h3 className="poke-name">
+        <span className="poke-name"></span>
+         {pokemon.name}</h3>
 			<div className="avatar">
 				<img src={pokemon.sprites.front_default} alt={pokemon.name} />
 				<img src={pokemon.sprites.back_default} alt={pokemon.name} />

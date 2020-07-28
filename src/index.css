@@ -15,8 +15,8 @@ body {
 }
 
 #root{
-  height: 100vh;
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
   justify-content: center;
   background-image: url('./assets/images/poke-sky.jpg');
