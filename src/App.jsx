@@ -18,7 +18,6 @@ const App = () => {
       let pokemon = await loadingPokemon(response.results);
       setLoading(false);
       console.log(response.results);
-
     }
     fetchData();
   }, []);
