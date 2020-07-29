@@ -16,6 +16,8 @@ body{
 .control{
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 
 button{
@@ -24,8 +26,9 @@ button{
   font-size: 1.7rem;
   text-transform: uppercase;
   border-top: 6px inset rgba(255, 255, 255, .5);
-  border-right: 6px inset rgba(255, 255, 255, .5);
+  border-right: 6px inset rgba(255, 255, 255, 0.317);
   border-left: 6px inset rgba(0, 0, 0, .5);
   border-bottom: 6px inset rgba(0, 0, 0, .5);
   padding: .5rem 2.5rem;
+  border-radius: 20px;
 }

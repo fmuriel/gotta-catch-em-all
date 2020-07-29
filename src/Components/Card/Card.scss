@@ -1,7 +1,11 @@
 .card{
-  border: 2px solid black;
+  border-top: 3px inset rgba(255, 255, 255, .5);
+  border-right: 3px inset rgba(255, 255, 255, .5);
+  border-left: 3px inset rgba(0, 0, 0, .5);
+  border-bottom: 3px inset rgba(0, 0, 0, .5);
   margin: 1.5rem;
   padding: 1.5rem;
+}
 
   h3{
     text-align: center;
@@ -17,12 +21,15 @@
   .img{
     height: 3rem;
   }
-}
 
 .avatar{
+  border-top: 3px inset rgba(255, 255, 255, .5);
+  border-right: 3px inset rgba(255, 255, 255, .5);
+  border-left: 3px inset rgba(0, 0, 0, .5);
+  border-bottom: 3px inset rgba(0, 0, 0, .5);
   text-align: center;
   background-size: cover;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   padding: 1rem;
 }
 
@@ -37,5 +44,78 @@
   background-color: #e57373;
   .avatar{
     background-image: url("../../assets/images/volcano.jpg");
+  }
+}
+
+.water{
+  background-color: #bbdefb;
+  .avatar{
+    background-image: url("../../assets/images/beach.jpg");
+  }
+}
+
+.bug{
+  background-color: #a5d6a7;
+  .avatar{
+    background-image: url("../../assets/images/bug-forest.jpg");
+  }
+}
+
+.poke-types{
+  display: flex;
+  justify-content: center;
+  p{
+    border-top: 3px inset rgba(255, 255, 255, .5);
+    border-right: 3px inset rgba(255, 255, 255, .5);
+    border-left: 3px inset rgba(0, 0, 0, .5);
+    border-bottom: 3px inset rgba(0, 0, 0, .5);
+    padding: .5rem 1rem;
+    &:nth-child(2){
+      margin-left: .5rem;
+    }
+  }
+
+  p.grass{
+    background-color: #26a69a;
+  }
+
+  p.poison{
+    background-color: #b39ddb;
+  }
+
+  p.fire{
+    background-color: #ef5350;
+  }
+
+  p.flying{
+    background-color: #5d99c6;
+  }
+
+  p.water{
+    background-color: #4bacb8;
+  }
+
+  p.bug{
+    background-color: #c0ca33;
+  }
+
+
+
+}
+
+.poke-info{
+  background-color: #eee;
+  border-top: 3px inset rgba(255, 255, 255, .5);
+  border-right: 3px inset rgba(255, 255, 255, .5);
+  border-left: 3px inset rgba(0, 0, 0, .5);
+  border-bottom: 3px inset rgba(0, 0, 0, .5);
+  padding: .5rem 1rem;
+  h4{
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+  }
+  h4,
+  p{
+    margin: 0;
   }
 }

@@ -26,16 +26,6 @@ const Card = ({ pokemon }) => {
 			</div>
 
 			<div className="poke-info">
-				<div className="poke-weight">
-					<h4>Weight</h4>
-					<p>{weight}</p>
-				</div>
-
-				<div className="poke-height">
-					<h4>Height</h4>
-					<p>{height}</p>
-				</div>
-
 				<div className="poke-ability">
 					<h4>Abilities</h4>
 					{abilities.map(key => {
