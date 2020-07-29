@@ -1,3 +1,41 @@
-@media screen and (min-width: 760px){
+.card{
+  border: 2px solid black;
+  margin: 1.5rem;
+  padding: 1.5rem;
 
+  h3{
+    text-align: center;
+    border-top: 6px inset rgba(255, 255, 255, .5);
+    border-right: 6px inset rgba(255, 255, 255, .5);
+    border-left: 6px inset rgba(0, 0, 0, .5);
+    border-bottom: 6px inset rgba(0, 0, 0, .5);
+    margin: 0;
+    padding: .5rem 2.5rem;
+    background-color: #ffd54f;
+  }
+
+  .img{
+    height: 3rem;
+  }
+}
+
+.avatar{
+  text-align: center;
+  background-size: cover;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.grass{
+  background-color: #4db6ac;
+  .avatar{
+    background-image: url("../../assets/images/forest.jpg");
+  }
+}
+
+.fire{
+  background-color: #e57373;
+  .avatar{
+    background-image: url("../../assets/images/volcano.jpg");
+  }
 }

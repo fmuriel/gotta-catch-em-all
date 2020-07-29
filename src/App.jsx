@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { catchTheApi, getPokemon } from './services/pokeapi';
+import { catchTheApi } from './services/pokeapi';
 import Card from './components/Card/Card';
-import './App.css';
+import './App.scss';
 
 const App = () => {
   const [pokemonData, setPokemonData] = useState([]);
@@ -17,7 +17,6 @@ const App = () => {
       setPrevUrl(response.previous);
       let pokemon = await loadingPokemon(response.results);
       setLoading(false);
-      console.log(response.results);
     }
     fetchData();
   }, []);
@@ -46,19 +45,17 @@ const App = () => {
       let pokemonRecord = await catchTheApi(pokemon.url);
       return pokemonRecord;
     }))
-
     setPokemonData(_pokemonData);
-    console.log(_pokemonData);
   }
-
-
 
   return (
     <>
-      <button onClick={pagPrev} disabled={prevUrl ? '' : 'disabled'}>Prev</button>
 
-      <button onClick={pagNext}>Next</button>
-    
+      <div className="control">
+        <button onClick={pagPrev} disabled={prevUrl ? '' : 'disabled'}>Prev</button>
+        <button onClick={pagNext}>Next</button>
+      </div>
+
       {loading ? <h2>Loading...</h2> : (
         <>
           <div className="container">
@@ -68,6 +65,8 @@ const App = () => {
           </div>
         </>
       )}
+
+
     </>
   );
 }

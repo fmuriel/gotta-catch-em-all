@@ -1,0 +1,31 @@
+html{
+  font-size: 1rem;
+}
+
+p,
+h2,
+h3,
+h4{
+  font-size: 1.7rem;
+}
+
+body{
+  font-family: arcade, sans-serif;
+}
+
+.control{
+  display: flex;
+  justify-content: space-between;
+}
+
+button{
+  cursor: pointer;
+  font-family: arcade, sans-serif;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border-top: 6px inset rgba(255, 255, 255, .5);
+  border-right: 6px inset rgba(255, 255, 255, .5);
+  border-left: 6px inset rgba(0, 0, 0, .5);
+  border-bottom: 6px inset rgba(0, 0, 0, .5);
+  padding: .5rem 2.5rem;
+}

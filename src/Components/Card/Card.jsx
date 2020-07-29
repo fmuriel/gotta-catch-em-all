@@ -1,27 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Card.scss';
+import '../../App.scss';
 
-const Card = ( {pokemon} ) => {
-  const { name, sprites, types, weight, height, abilities } = pokemon;
-  const spritesFront = sprites.front_default;
-  const spritesBack = sprites.back_default;
+const Card = ({ pokemon }) => {
+  const { name, sprites, types, height, weight, abilities } = pokemon;
+  const spriteFront = sprites.front_default;
+  const spriteBack = sprites.back_default;
 
 	return (
-		<div className="card">
-			<h3 className="poke-name">
-        <span className="poke-name"></span>
-         {name}</h3>
+		<div className={`card ${types[0].type.name}`}>
+			<h3 className="poke-name">{name}</h3>
 			<div className="avatar">
-				<img src={spritesFront} alt={pokemon.name} />
-				<img src={spritesBack} alt={pokemon.name} />
+				<img src={spriteFront} alt={name} />
+				<img src={spriteBack} alt={name} />
 			</div>
 
 			<div className="poke-types">
-				{types && types?.map(type => {
+				{types.map(type => {
 					return (
-						<div className="poke-type" type={type.type.name} >
+						<p className="poke-type" className={type.type.name} >
 							{type.type.name}
-						</div>
+						</p>
 					)
 				})}
 			</div>
@@ -38,14 +37,12 @@ const Card = ( {pokemon} ) => {
 				</div>
 
 				<div className="poke-ability">
-					<h4>Ability</h4>
-					<p>{abilities.map(key => {
+					<h4>Abilities</h4>
+					{abilities.map(key => {
 					return (
-						<div className="poke-type">
-							{key.ability.name}
-						</div>
-					)
-				})}</p>
+            <p key={key}>{key.ability.name}</p>					
+            )
+				})}
 				</div>
 			</div>
 
